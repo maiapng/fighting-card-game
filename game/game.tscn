@@ -7,6 +7,11 @@
 [node name="Game" type="Node2D" unique_id=1752133137]
 script = ExtResource("1_l1rk1")
 
+[node name="Background" type="Sprite2D" parent="." unique_id=95472981]
+
+[node name="Stage" type="TileMapLayer" parent="." unique_id=303719452]
+tile_set = SubResource("TileSet_8cj0n")
+
 [node name="HUD" type="CanvasLayer" parent="." unique_id=1940979019]
 
 [node name="Hand" type="HBoxContainer" parent="HUD" unique_id=759060235]
@@ -20,6 +25,3 @@ offset_top = -40.0
 offset_right = 20.0
 grow_horizontal = 2
 grow_vertical = 0
-
-[node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=303719452]
-tile_set = SubResource("TileSet_8cj0n")
