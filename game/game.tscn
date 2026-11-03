@@ -1,6 +1,11 @@
 [gd_scene format=3 uid="uid://c8cuiba5i5mn6"]
 
+[ext_resource type="Script" uid="uid://dug0eq2ltofjf" path="res://game/game.gd" id="1_l1rk1"]
+
+[sub_resource type="TileSet" id="TileSet_8cj0n"]
+
 [node name="Game" type="Node2D" unique_id=1752133137]
+script = ExtResource("1_l1rk1")
 
 [node name="HUD" type="CanvasLayer" parent="." unique_id=1940979019]
 
@@ -17,3 +22,4 @@ grow_horizontal = 2
 grow_vertical = 0
 
 [node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=303719452]
+tile_set = SubResource("TileSet_8cj0n")

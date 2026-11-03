@@ -24,7 +24,7 @@ window/stretch/aspect="expand"
 folder_colors={
 "res://characters/": "purple",
 "res://classes/": "yellow",
-"res://scenes/": "green"
+"res://game/": "green"
 }
 
 [physics]

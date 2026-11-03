@@ -4,3 +4,4 @@ class_name CardInfo extends Resource
 @export var name:String
 @export var speed:int
 @export var damage:int
+@export var art:CompressedTexture2D
