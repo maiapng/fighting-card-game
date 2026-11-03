@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://gbhajhckw7as"]
+
+[ext_resource type="Script" uid="uid://ceo06rvg0abhg" path="res://characters/character.gd" id="1_54qew"]
+
+[node name="Character" type="Node2D" unique_id=2051707831]
+script = ExtResource("1_54qew")
+
+[node name="Sprite" type="Sprite2D" parent="." unique_id=1471438926]
+
+[node name="Cards" type="Node2D" parent="." unique_id=1871566047]
