@@ -1,9 +1,8 @@
 class_name Character extends Node2D
 
-@onready var sprite:Sprite2D = $Sprite
+var character:CharacterInfo
+@onready var sprite:AnimatedSprite2D = $Sprite
 
-func _ready() -> void:
-	pass
-
-func _process(delta: float) -> void:
-	pass
+func _init(new_info:CharacterInfo, deck) -> void:
+	character = new_info
+	sprite.sprite_frames = character.animations
