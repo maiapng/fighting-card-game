@@ -15,10 +15,6 @@ run/main_scene="uid://dbkds1cutv6ne"
 config/features=PackedStringArray("4.7", "Forward Plus")
 config/icon="res://icon.svg"
 
-[autoload]
-
-CardDatabase="*uid://b7pugvb36ahx8"
-
 [debug]
 
 gdscript/warnings/untyped_declaration=2

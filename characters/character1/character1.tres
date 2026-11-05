@@ -3,8 +3,11 @@
 [ext_resource type="Script" uid="uid://co7iv5rsok2ii" path="res://classes/card_info.gd" id="1_hto4b"]
 [ext_resource type="Script" uid="uid://0jsn8vnnksji" path="res://characters/character_info.gd" id="2_1h74v"]
 
+[sub_resource type="SpriteFrames" id="SpriteFrames_54qew"]
+
 [resource]
 script = ExtResource("2_1h74v")
 id = "character1"
 name = "JustATestChar"
+animations = SubResource("SpriteFrames_54qew")
 metadata/_custom_type_script = "uid://0jsn8vnnksji"
