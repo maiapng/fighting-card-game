@@ -1,7 +1,7 @@
 class_name Deck extends Resource
 
 @export var name:String
-@export var character:CharacterInfo = load("res://characters/character1/character1.tres")
+@export var character:CharacterInfo = CardDatabase.Characters.character1
 @export var cards:Array[CardInfo]
 
 func _init(_deck_code:String="") -> void:

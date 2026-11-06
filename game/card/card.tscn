@@ -60,4 +60,5 @@ offset_left = 42.0
 offset_top = 353.0
 offset_right = 348.0
 offset_bottom = 482.0
-text = "This is just a test card"
+bbcode_enabled = true
+text = "This is just a test card.[br]Testing."

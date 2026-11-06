@@ -2,14 +2,7 @@
 
 [ext_resource type="Script" uid="uid://ceo06rvg0abhg" path="res://characters/character.gd" id="1_54qew"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_qtdp2"]
-
 [node name="Character" type="Node2D" unique_id=2051707831]
 script = ExtResource("1_54qew")
 
 [node name="Sprite" type="AnimatedSprite2D" parent="." unique_id=1510000046]
-
-[node name="Hurtbox" type="Area2D" parent="." unique_id=923784084]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Hurtbox" unique_id=179528439]
-shape = SubResource("RectangleShape2D_qtdp2")

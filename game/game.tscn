@@ -25,3 +25,22 @@ offset_top = -40.0
 offset_right = 20.0
 grow_horizontal = 2
 grow_vertical = 0
+
+[node name="TopBar" type="HBoxContainer" parent="HUD" unique_id=601521027]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -429.66498
+offset_top = 20.0
+offset_right = 431.33447
+offset_bottom = 47.000015
+grow_horizontal = 2
+theme_override_constants/separation = 48
+
+[node name="LeftHealthBar" type="ProgressBar" parent="HUD/TopBar" unique_id=495032807]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="RightHealthBar" type="ProgressBar" parent="HUD/TopBar" unique_id=266376600]
+layout_mode = 2
+size_flags_horizontal = 3
