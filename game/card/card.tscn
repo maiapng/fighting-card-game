@@ -1,0 +1,63 @@
+[gd_scene format=3 uid="uid://baogy2mvbk1l"]
+
+[ext_resource type="Script" uid="uid://rkowj8l7r52p" path="res://game/card/card.gd" id="1_oy5rc"]
+[ext_resource type="Resource" uid="uid://bsu1qp34iisev" path="res://characters/character1/cards/test.tres" id="2_fdhqu"]
+[ext_resource type="Texture2D" uid="uid://pox4cvwshei6" path="res://game/card/test_art.png" id="3_fdhqu"]
+[ext_resource type="Texture2D" uid="uid://blc7mw58jtbv8" path="res://game/card/temp_frame.png" id="3_yfcxu"]
+
+[sub_resource type="Theme" id="Theme_qtdp2"]
+RichTextLabel/colors/default_color = Color(0, 0, 0, 1)
+
+[node name="Card" type="Control" unique_id=432828512 node_paths=PackedStringArray("art", "title", "description")]
+custom_maximum_size = Vector2(200, 300)
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -1058.0
+offset_bottom = -625.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = SubResource("Theme_qtdp2")
+script = ExtResource("1_oy5rc")
+card = ExtResource("2_fdhqu")
+art = NodePath("Art")
+title = NodePath("Title")
+description = NodePath("Description")
+
+[node name="Art" type="TextureRect" parent="." unique_id=318745536]
+layout_mode = 0
+offset_left = 31.0
+offset_top = 66.0
+offset_right = 381.0
+offset_bottom = 331.0
+texture = ExtResource("3_fdhqu")
+expand_mode = 5
+stretch_mode = 4
+
+[node name="Frame" type="TextureRect" parent="." unique_id=1194582850]
+layout_mode = 1
+offset_right = 400.0
+offset_bottom = 554.0
+texture = ExtResource("3_yfcxu")
+expand_mode = 3
+stretch_mode = 4
+
+[node name="Title" type="RichTextLabel" parent="." unique_id=1027488638]
+layout_mode = 0
+offset_left = 89.0
+offset_top = 28.0
+offset_right = 356.0
+offset_bottom = 60.0
+theme_override_font_sizes/normal_font_size = 22
+bbcode_enabled = true
+text = "Test Card"
+vertical_alignment = 1
+
+[node name="Description" type="RichTextLabel" parent="." unique_id=382075881]
+layout_mode = 0
+offset_left = 42.0
+offset_top = 353.0
+offset_right = 348.0
+offset_bottom = 482.0
+text = "This is just a test card"

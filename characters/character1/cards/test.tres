@@ -1,5 +1,6 @@
 [gd_resource type="Resource" script_class="CardInfo" format=3 uid="uid://bsu1qp34iisev"]
 
+[ext_resource type="Texture2D" uid="uid://pox4cvwshei6" path="res://game/card/test_art.png" id="1_24a7i"]
 [ext_resource type="Script" uid="uid://co7iv5rsok2ii" path="res://classes/card_info.gd" id="1_qfcke"]
 
 [resource]
@@ -7,4 +8,5 @@ script = ExtResource("1_qfcke")
 id = "test"
 name = "Test Card"
 description = "This is just a test card"
+art = ExtResource("1_24a7i")
 metadata/_custom_type_script = "uid://co7iv5rsok2ii"
