@@ -1,0 +1,35 @@
+[gd_scene format=3 uid="uid://baogy2mvbk1l"]
+
+[ext_resource type="Script" uid="uid://rkowj8l7r52p" path="res://game/card.gd" id="1_0w4ig"]
+[ext_resource type="Resource" uid="uid://bsu1qp34iisev" path="res://characters/character1/cards/test.tres" id="2_xq66r"]
+
+[sub_resource type="Theme" id="Theme_qtdp2"]
+
+[node name="Card" type="Control" unique_id=432828512 node_paths=PackedStringArray("title", "description")]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -1058.0
+offset_bottom = -625.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = SubResource("Theme_qtdp2")
+script = ExtResource("1_0w4ig")
+card = ExtResource("2_xq66r")
+title = NodePath("Title")
+description = NodePath("Description")
+
+[node name="Title" type="Label" parent="." unique_id=245538484]
+layout_mode = 0
+offset_right = 94.0
+offset_bottom = 23.0
+text = "Test Card"
+
+[node name="Description" type="RichTextLabel" parent="." unique_id=382075881]
+layout_mode = 0
+offset_left = 1.0
+offset_top = 25.0
+offset_right = 148.0
+offset_bottom = 74.0
+text = "This is just a test card"
