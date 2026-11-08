@@ -18,5 +18,5 @@ func _on_join_pressed() -> void:
 	multiplayer.multiplayer_peer = peer
 
 func _on_peer_connected(id:int) -> void:
-	var game:Game = game_scene.instantiate().starting_game(id, "", "", randi())
-	get_tree().change_scene_to_packed(game_scene)
+	var game:Game = game_scene.instantiate().starting_game(id, "", "")
+	get_tree().change_scene_to_node(game)
