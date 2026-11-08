@@ -7,7 +7,7 @@ var host_character:Character
 var client_character:Character
 var rng:RandomNumberGenerator = RandomNumberGenerator.new()
 
-func _init(host_deck:String="", client_deck:String="", random_seed:int=0) -> void:
+func starting_game(id:int, host_deck:String="", client_deck:String="", random_seed:int=0) -> Game:
 	host_character = character_scene.instantiate()
 	host_character.set_deck(host_deck)
 	add_child(host_character)
@@ -15,3 +15,4 @@ func _init(host_deck:String="", client_deck:String="", random_seed:int=0) -> voi
 	client_character.set_deck(host_deck)
 	add_child(client_character)
 	rng.seed = random_seed
+	return self
