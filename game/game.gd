@@ -1,6 +1,6 @@
 class_name Game extends Node2D
 
-const character_scene:PackedScene = preload("uid://gbhajhckw7as")
+const CHARACTER_SCENE:PackedScene = preload("uid://gbhajhckw7as")
 @onready var background:Sprite2D = $Background
 @onready var stage:TileMapLayer = $Stage
 var host_character:Character

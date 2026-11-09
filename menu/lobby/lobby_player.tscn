@@ -20,12 +20,13 @@ offset_bottom = 40.0
 
 [node name="Hbox" type="HBoxContainer" parent="Margin" unique_id=1517201347]
 layout_mode = 2
-script = ExtResource("1_fsh8v")
 
 [node name="Avatar" type="TextureRect" parent="Margin/Hbox" unique_id=260006181]
+unique_name_in_owner = true
 layout_mode = 2
 script = ExtResource("1_fsh8v")
 
-[node name="SteamUsername" type="Label" parent="Margin/Hbox" unique_id=1379745338]
+[node name="Username" type="Label" parent="Margin/Hbox" unique_id=1379745338]
+unique_name_in_owner = true
 layout_mode = 2
 script = ExtResource("2_bqisf")

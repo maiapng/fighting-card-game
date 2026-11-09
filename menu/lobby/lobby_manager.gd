@@ -1,6 +1,6 @@
 class_name LobbyManager extends Control
 
-const _lobby:PackedScene = preload("uid://nwkf1vr3lkvw")
+const LOBBY:PackedScene = preload("uid://nwkf1vr3lkvw")
 @onready var _lobby_id_input:LineEdit = $ID
 
 func _ready() -> void:
@@ -25,7 +25,7 @@ func _on_lobby_joined(lobby_id:int, _permissions:int, _locked:int, response:Stea
 		return
 	print("Lobby %s joined successfully" % lobby_id)
 	Steamworks.lobby_id = lobby_id
-	get_tree().change_scene_to_packed(_lobby)
+	get_tree().change_scene_to_packed(LOBBY)
 
 func _on_host_pressed() -> void:
 	Steam.createLobby(Steam.LobbyType.LOBBY_TYPE_PRIVATE, 2)
