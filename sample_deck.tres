@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Deck" format=3 uid="uid://df6axv4j2x37q"]
+
+[ext_resource type="Script" uid="uid://co7iv5rsok2ii" path="res://classes/card_info.gd" id="1_n2srn"]
+[ext_resource type="Resource" uid="uid://bsu1qp34iisev" path="res://characters/character1/cards/test.tres" id="2_f5cvq"]
+[ext_resource type="Script" uid="uid://chgfrbrymldog" path="res://classes/deck.gd" id="2_og6hm"]
+
+[resource]
+script = ExtResource("2_og6hm")
+name = "Sample Deck 1"
+cards = Array[ExtResource("1_n2srn")]([ExtResource("2_f5cvq"), ExtResource("2_f5cvq")])
+metadata/_custom_type_script = "uid://chgfrbrymldog"

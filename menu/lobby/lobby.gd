@@ -6,6 +6,7 @@ const LOBBY_PLAYER:PackedScene = preload("uid://jq7nioyf7t11")
 @onready var _title:Label = %Title
 @onready var _table_list:VBoxContainer = %Tables
 @onready var _player_list:VBoxContainer = %Players
+@onready var _deck_selector:OptionButton = %DeckSelector
 
 func _ready() -> void:
 	if Steamworks.lobby_id == 0:
@@ -14,6 +15,7 @@ func _ready() -> void:
 		return
 	_get_lobby_name()
 	_get_lobby_members()
+	_get_decks()
 
 func _get_lobby_name() -> void:
 	var lobby_name:String = Steam.getLobbyData(Steamworks.lobby_id, "lobby_name")
@@ -28,3 +30,7 @@ func _get_lobby_members() -> void:
 		var player_object:LobbyPlayer = LOBBY_PLAYER.instantiate()
 		player_object.steam_id = Steam.getLobbyMemberByIndex(Steamworks.lobby_id, i)
 		_player_list.call_deferred("add_child", player_object)
+
+func _get_decks() -> void:
+	for deck in UserData.decks:
+		_deck_selector.add_item(deck.name)
