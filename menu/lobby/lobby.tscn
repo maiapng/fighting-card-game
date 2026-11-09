@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://nwkf1vr3lkvw"]
 
 [ext_resource type="Script" uid="uid://dmu3l2k15h634" path="res://menu/lobby/lobby.gd" id="1_2y140"]
+[ext_resource type="PackedScene" uid="uid://bsdp3et32r4ga" path="res://menu/lobby/table.tscn" id="2_gh7de"]
 
 [sub_resource type="Theme" id="Theme_hw0gf"]
 
@@ -39,6 +40,7 @@ theme_override_constants/margin_bottom = 40
 
 [node name="VBoxContainer" type="VBoxContainer" parent="Panel/MarginContainer" unique_id=1287958659]
 layout_mode = 2
+theme_override_constants/separation = 32
 
 [node name="Title" type="Label" parent="Panel/MarginContainer/VBoxContainer" unique_id=1445827643]
 unique_name_in_owner = true
@@ -49,18 +51,36 @@ horizontal_alignment = 1
 
 [node name="HBoxContainer" type="HBoxContainer" parent="Panel/MarginContainer/VBoxContainer" unique_id=1471229818]
 layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/separation = 12
 
 [node name="Tables" type="VBoxContainer" parent="Panel/MarginContainer/VBoxContainer/HBoxContainer" unique_id=2047423163]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 3
 
-[node name="Players" type="VBoxContainer" parent="Panel/MarginContainer/VBoxContainer/HBoxContainer" unique_id=1817220914]
-unique_name_in_owner = true
+[node name="Table" parent="Panel/MarginContainer/VBoxContainer/HBoxContainer/Tables" unique_id=1982583916 instance=ExtResource("2_gh7de")]
+layout_mode = 2
+
+[node name="Table2" parent="Panel/MarginContainer/VBoxContainer/HBoxContainer/Tables" unique_id=1547941323 instance=ExtResource("2_gh7de")]
+layout_mode = 2
+
+[node name="Table3" parent="Panel/MarginContainer/VBoxContainer/HBoxContainer/Tables" unique_id=376378445 instance=ExtResource("2_gh7de")]
+layout_mode = 2
+
+[node name="Table4" parent="Panel/MarginContainer/VBoxContainer/HBoxContainer/Tables" unique_id=693920892 instance=ExtResource("2_gh7de")]
+layout_mode = 2
+
+[node name="Table5" parent="Panel/MarginContainer/VBoxContainer/HBoxContainer/Tables" unique_id=615015224 instance=ExtResource("2_gh7de")]
+layout_mode = 2
+
+[node name="Settings" type="VBoxContainer" parent="Panel/MarginContainer/VBoxContainer/HBoxContainer" unique_id=1192185404]
+custom_maximum_size = Vector2(320, -1)
 layout_mode = 2
 size_flags_horizontal = 3
 
-[node name="Settings" type="VBoxContainer" parent="Panel/MarginContainer/VBoxContainer/HBoxContainer" unique_id=1192185404]
+[node name="Players" type="VBoxContainer" parent="Panel/MarginContainer/VBoxContainer/HBoxContainer/Settings" unique_id=1817220914]
+unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 3
 

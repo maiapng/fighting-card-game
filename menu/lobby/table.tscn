@@ -1,0 +1,72 @@
+[gd_scene format=3 uid="uid://bsdp3et32r4ga"]
+
+[ext_resource type="Script" uid="uid://dpfto64g672bt" path="res://menu/steamkit/steam_avatar_rect.gd" id="1_17pc6"]
+[ext_resource type="Script" uid="uid://jqgg1o41frle" path="res://menu/lobby/table.gd" id="1_lexk0"]
+[ext_resource type="Script" uid="uid://c5mr05wr6jew" path="res://menu/steamkit/steam_username.gd" id="2_lexk0"]
+
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_17pc6"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_gh7de"]
+
+[node name="Table" type="PanelContainer" unique_id=615015224]
+custom_minimum_size = Vector2(400, 0)
+offset_right = 400.0
+offset_bottom = 91.0
+size_flags_horizontal = 4
+script = ExtResource("1_lexk0")
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=977085224]
+layout_mode = 2
+theme_override_constants/margin_left = 32
+theme_override_constants/margin_top = 16
+theme_override_constants/margin_right = 32
+theme_override_constants/margin_bottom = 16
+metadata/_edit_use_anchors_ = true
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer" unique_id=1384076330]
+layout_mode = 2
+theme_override_constants/separation = 32
+alignment = 1
+
+[node name="Player1" type="VBoxContainer" parent="MarginContainer/HBoxContainer" unique_id=1878529752]
+layout_mode = 2
+size_flags_vertical = 4
+
+[node name="SteamAvatarRect" type="TextureRect" parent="MarginContainer/HBoxContainer/Player1" unique_id=1848194616]
+custom_minimum_size = Vector2(48, 48)
+custom_maximum_size = Vector2(48, 48)
+layout_mode = 2
+texture = SubResource("PlaceholderTexture2D_17pc6")
+script = ExtResource("1_17pc6")
+metadata/_custom_type_script = "uid://dpfto64g672bt"
+
+[node name="SteamUsername" type="Label" parent="MarginContainer/HBoxContainer/Player1" unique_id=2035279420]
+layout_mode = 2
+text = "Player"
+label_settings = SubResource("LabelSettings_gh7de")
+script = ExtResource("2_lexk0")
+metadata/_custom_type_script = "uid://c5mr05wr6jew"
+
+[node name="Button" type="Button" parent="MarginContainer/HBoxContainer" unique_id=681911504]
+custom_minimum_size = Vector2(160, 0)
+layout_mode = 2
+size_flags_vertical = 4
+text = "Join Table"
+
+[node name="Player2" type="VBoxContainer" parent="MarginContainer/HBoxContainer" unique_id=632424640]
+layout_mode = 2
+size_flags_vertical = 4
+
+[node name="SteamAvatarRect" type="TextureRect" parent="MarginContainer/HBoxContainer/Player2" unique_id=1948498681]
+custom_minimum_size = Vector2(48, 48)
+custom_maximum_size = Vector2(48, 48)
+layout_mode = 2
+texture = SubResource("PlaceholderTexture2D_17pc6")
+script = ExtResource("1_17pc6")
+metadata/_custom_type_script = "uid://dpfto64g672bt"
+
+[node name="SteamUsername" type="Label" parent="MarginContainer/HBoxContainer/Player2" unique_id=563705492]
+layout_mode = 2
+text = "Player"
+script = ExtResource("2_lexk0")
+metadata/_custom_type_script = "uid://c5mr05wr6jew"

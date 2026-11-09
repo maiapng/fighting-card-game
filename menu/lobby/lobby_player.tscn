@@ -4,8 +4,8 @@
 [ext_resource type="Script" uid="uid://dpfto64g672bt" path="res://menu/steamkit/steam_avatar_rect.gd" id="1_fsh8v"]
 [ext_resource type="Script" uid="uid://c5mr05wr6jew" path="res://menu/steamkit/steam_username.gd" id="2_bqisf"]
 
-[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_bqisf"]
-size = Vector2(32, 32)
+[sub_resource type="LabelSettings" id="LabelSettings_bqisf"]
+font_size = 20
 
 [node name="LobbyPlayer" type="Control" unique_id=1700688586]
 layout_mode = 3
@@ -18,7 +18,7 @@ script = ExtResource("1_bqisf")
 
 [node name="Margin" type="MarginContainer" parent="." unique_id=1844356498]
 layout_mode = 0
-offset_right = 40.0
+offset_right = 184.0
 offset_bottom = 40.0
 
 [node name="Hbox" type="HBoxContainer" parent="Margin" unique_id=1517201347]
@@ -26,13 +26,15 @@ layout_mode = 2
 
 [node name="Avatar" type="TextureRect" parent="Margin/Hbox" unique_id=260006181]
 unique_name_in_owner = true
+custom_minimum_size = Vector2(48, 48)
+custom_maximum_size = Vector2(48, 48)
 layout_mode = 2
-texture = SubResource("PlaceholderTexture2D_bqisf")
+size_flags_horizontal = 0
 script = ExtResource("1_fsh8v")
-avatar_size = 1
 
 [node name="Username" type="Label" parent="Margin/Hbox" unique_id=1379745338]
 unique_name_in_owner = true
 layout_mode = 2
-text = "Username"
+text = "Usernamedasdas"
+label_settings = SubResource("LabelSettings_bqisf")
 script = ExtResource("2_bqisf")
