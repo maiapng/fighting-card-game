@@ -1,8 +1,31 @@
-[gd_scene format=3 uid="uid://c8cuiba5i5mn6"]
+[gd_scene format=4 uid="uid://c8cuiba5i5mn6"]
 
 [ext_resource type="Script" uid="uid://dug0eq2ltofjf" path="res://game/game.gd" id="1_l1rk1"]
+[ext_resource type="Texture2D" uid="uid://dduv0rbgced78" path="res://icon.svg" id="2_vasa2"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_h7iqs"]
+texture = ExtResource("2_vasa2")
+texture_region_size = Vector2i(32, 32)
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+3:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+3:1/0 = 0
+0:2/0 = 0
+1:2/0 = 0
+2:2/0 = 0
+3:2/0 = 0
+0:3/0 = 0
+1:3/0 = 0
+2:3/0 = 0
+3:3/0 = 0
 
 [sub_resource type="TileSet" id="TileSet_8cj0n"]
+tile_size = Vector2i(64, 96)
+sources/0 = SubResource("TileSetAtlasSource_h7iqs")
 
 [node name="Game" type="Node2D" unique_id=1752133137]
 script = ExtResource("1_l1rk1")
@@ -10,6 +33,8 @@ script = ExtResource("1_l1rk1")
 [node name="Background" type="Sprite2D" parent="." unique_id=95472981]
 
 [node name="Stage" type="TileMapLayer" parent="." unique_id=303719452]
+position = Vector2(32, 0)
+tile_map_data = PackedByteArray("AAAPAAQAAAAAAAAAAAAOAAQAAAAAAAEAAAAPAAIAAAAAAAAAAAAOAAIAAAAAAAEAAAANAAIAAAAAAAEAAAAMAAIAAAAAAAEAAAALAAIAAAAAAAAAAAAKAAIAAAAAAAAAAAAJAAIAAAAAAAEAAAAIAAIAAAAAAAEAAAAHAAIAAAAAAAEAAAAGAAIAAAAAAAAAAAAEAAIAAAAAAAEAAAADAAIAAAAAAAEAAAACAAIAAAAAAAEAAAACAAQAAAAAAAEAAAADAAQAAAAAAAEAAAAEAAQAAAAAAAEAAAAFAAQAAAAAAAAAAAAGAAQAAAAAAAAAAAAHAAQAAAAAAAEAAAAIAAQAAAAAAAEAAAAJAAQAAAAAAAEAAAAKAAQAAAAAAAAAAAALAAQAAAAAAAAAAAAMAAQAAAAAAAEAAAANAAQAAAAAAAEAAAAPAAMAAAAAAAAAAAAOAAMAAAAAAAEAAAANAAMAAAAAAAEAAAAMAAMAAAAAAAEAAAALAAMAAAAAAAAAAAAKAAMAAAAAAAAAAAAJAAMAAAAAAAEAAAAIAAMAAAAAAAEAAAAHAAMAAAAAAAEAAAAGAAMAAAAAAAAAAAAFAAMAAAAAAAAAAAAEAAMAAAAAAAEAAAADAAMAAAAAAAEAAAACAAMAAAAAAAEAAAABAAQAAAAAAAAAAAABAAMAAAAAAAAAAAABAAIAAAAAAAAAAAAFAAIAAAAAAAAAAAA=")
 tile_set = SubResource("TileSet_8cj0n")
 
 [node name="HUD" type="CanvasLayer" parent="." unique_id=1940979019]

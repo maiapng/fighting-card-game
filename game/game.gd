@@ -7,13 +7,7 @@ var host_character:Character
 var client_character:Character
 var rng:RandomNumberGenerator = RandomNumberGenerator.new()
 
-func starting_game(_id:int, host_deck:String="", client_deck:String="") -> Game:
-	host_character = character_scene.instantiate()
-	host_character.set_deck(host_deck)
-	add_child(host_character)
-	client_character = character_scene.instantiate()
-	client_character.set_deck(client_deck)
-	add_child(client_character)
+func starting_game() -> Game:
 	return self
 
 func _ready() -> void:

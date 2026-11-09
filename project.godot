@@ -17,12 +17,17 @@ config/icon="res://icon.svg"
 
 [debug]
 
+file_logging/enable_file_logging=true
 gdscript/warnings/untyped_declaration=2
 
 [display]
 
 window/stretch/mode="canvas_items"
 window/stretch/aspect="expand"
+
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/godotsteam/plugin.cfg")
 
 [file_customization]
 
@@ -39,3 +44,7 @@ folder_colors={
 [rendering]
 
 rendering_device/driver.windows="d3d12"
+
+[steam]
+
+initialization/app_data/app_id=480
