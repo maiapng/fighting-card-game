@@ -1,0 +1,47 @@
+[gd_scene format=3 uid="uid://doh8y12nbg4ky"]
+
+[ext_resource type="Script" uid="uid://dfgs68inwrn87" path="res://menu/lobby/lobby_manager.gd" id="1_hw0gf"]
+
+[node name="LobbyManager" type="Control" unique_id=1992549463]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_hw0gf")
+
+[node name="ColorRect" type="Panel" parent="." unique_id=1576211115]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Host" type="Button" parent="." unique_id=1750257399]
+layout_mode = 0
+offset_left = 208.0
+offset_top = 226.0
+offset_right = 520.0
+offset_bottom = 391.0
+text = "HOST"
+
+[node name="Join" type="Button" parent="." unique_id=651872966]
+layout_mode = 0
+offset_left = 639.0
+offset_top = 326.0
+offset_right = 951.0
+offset_bottom = 491.0
+text = "JOIN"
+
+[node name="ID" type="LineEdit" parent="." unique_id=421924912]
+layout_mode = 0
+offset_left = 638.0
+offset_top = 207.0
+offset_right = 942.0
+offset_bottom = 300.0
+placeholder_text = "LOBBY ID"
+
+[connection signal="pressed" from="Host" to="." method="_on_host_pressed"]
+[connection signal="pressed" from="Join" to="." method="_on_join_pressed"]

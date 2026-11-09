@@ -1,3 +1,9 @@
+extends Node
+
+var lobby_id:int = 0
+var invite_lobby_id:int = 0
+
+
 func _ready() -> void:
 	initialize_steam()
 

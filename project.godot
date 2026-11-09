@@ -11,9 +11,13 @@ config_version=5
 [application]
 
 config/name="FightingCardGame"
-run/main_scene="uid://dbkds1cutv6ne"
+run/main_scene="uid://doh8y12nbg4ky"
 config/features=PackedStringArray("4.7", "Forward Plus")
 config/icon="res://icon.svg"
+
+[autoload]
+
+Steamworks="*uid://dv17n14ei6hsj"
 
 [debug]
 
@@ -32,9 +36,11 @@ enabled=PackedStringArray("res://addons/godotsteam/plugin.cfg")
 [file_customization]
 
 folder_colors={
+"res://autoload/": "red",
 "res://characters/": "purple",
 "res://classes/": "yellow",
-"res://game/": "green"
+"res://game/": "blue",
+"res://menu/": "green"
 }
 
 [physics]
@@ -48,3 +54,4 @@ rendering_device/driver.windows="d3d12"
 [steam]
 
 initialization/app_data/app_id=480
+initialization/processes/embed_callbacks=true

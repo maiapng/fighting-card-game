@@ -1,0 +1,31 @@
+[gd_scene format=3 uid="uid://jq7nioyf7t11"]
+
+[ext_resource type="Script" uid="uid://b8kk3f21gfsin" path="res://menu/lobby/lobby_player.gd" id="1_bqisf"]
+[ext_resource type="Script" uid="uid://dpfto64g672bt" path="res://menu/steamkit/steam_avatar_rect.gd" id="1_fsh8v"]
+[ext_resource type="Script" uid="uid://c5mr05wr6jew" path="res://menu/steamkit/steam_username.gd" id="2_bqisf"]
+
+[node name="LobbyPlayer" type="Control" unique_id=1700688586]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_bqisf")
+
+[node name="Margin" type="MarginContainer" parent="." unique_id=1844356498]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Hbox" type="HBoxContainer" parent="Margin" unique_id=1517201347]
+layout_mode = 2
+script = ExtResource("1_fsh8v")
+
+[node name="Avatar" type="TextureRect" parent="Margin/Hbox" unique_id=260006181]
+layout_mode = 2
+script = ExtResource("1_fsh8v")
+
+[node name="SteamUsername" type="Label" parent="Margin/Hbox" unique_id=1379745338]
+layout_mode = 2
+script = ExtResource("2_bqisf")
