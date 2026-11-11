@@ -18,6 +18,10 @@ func _on_lobby_created(connect_status:Steam.Result, lobby_id:int) -> void:
 	Steamworks.lobby_id = lobby_id
 	if not Steam.setLobbyData(Steamworks.lobby_id, "lobby_name", "Test Lobby"):
 		printerr("Failed to set lobby name")
+	var peer:MultiplayerPeer = SteamMultiplayerPeer.new()
+	peer.create_host()
+	peer.server_relay = true
+	multiplayer.peer = peer
 
 func _on_lobby_joined(lobby_id:int, _permissions:int, _locked:int, response:Steam.ChatRoomEnterResponse) -> void:
 	if response != Steam.ChatRoomEnterResponse.CHAT_ROOM_ENTER_RESPONSE_SUCCESS:
@@ -25,6 +29,12 @@ func _on_lobby_joined(lobby_id:int, _permissions:int, _locked:int, response:Stea
 		return
 	print("Lobby %s joined successfully" % lobby_id)
 	Steamworks.lobby_id = lobby_id
+	var id:int = Steam.getLobbyOwner(lobby_id)
+	if id != Steam.getSteamID():
+		var peer:MultiplayerPeer = SteamMultiplayerPeer.new()
+		peer.create_client(id)
+		peer.server_relay = true
+		multiplayer.peer = peer
 	get_tree().change_scene_to_packed(LOBBY)
 
 func _on_host_pressed() -> void:

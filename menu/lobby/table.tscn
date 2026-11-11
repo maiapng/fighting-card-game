@@ -1,7 +1,6 @@
 [gd_scene format=3 uid="uid://bsdp3et32r4ga"]
 
 [ext_resource type="Script" uid="uid://dpfto64g672bt" path="res://menu/steamkit/steam_avatar_rect.gd" id="1_17pc6"]
-[ext_resource type="Script" uid="uid://jqgg1o41frle" path="res://menu/lobby/table.gd" id="1_lexk0"]
 [ext_resource type="Script" uid="uid://c5mr05wr6jew" path="res://menu/steamkit/steam_username.gd" id="2_lexk0"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4ojp1"]
@@ -23,7 +22,6 @@ custom_minimum_size = Vector2(400, 0)
 offset_right = 400.0
 offset_bottom = 91.0
 size_flags_horizontal = 4
-script = ExtResource("1_lexk0")
 
 [node name="MarginContainer" type="MarginContainer" parent="." unique_id=977085224]
 layout_mode = 2

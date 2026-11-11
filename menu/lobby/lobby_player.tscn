@@ -39,7 +39,9 @@ text = "Usernamedasdas"
 label_settings = SubResource("LabelSettings_bqisf")
 script = ExtResource("2_bqisf")
 
-[node name="Button" type="Button" parent="Margin/Hbox" unique_id=1800067112]
+[node name="Challenge" type="Button" parent="Margin/Hbox" unique_id=1800067112]
 layout_mode = 2
 size_flags_vertical = 4
-text = "START GAME"
+text = "Challenge"
+
+[connection signal="pressed" from="Margin/Hbox/Challenge" to="." method="_on_start_pressed"]

@@ -4,7 +4,6 @@ const LOBBY_MANAGER:PackedScene = preload("uid://doh8y12nbg4ky")
 const LOBBY_PLAYER:PackedScene = preload("uid://jq7nioyf7t11")
 
 @onready var _title:Label = %Title
-@onready var _table_list:VBoxContainer = %Tables
 @onready var _player_list:VBoxContainer = %Players
 @onready var _deck_selector:OptionButton = %DeckSelector
 
@@ -35,7 +34,7 @@ func _on_lobby_chat_update(lobby_id: int, _changed_id: int, _making_change_id: i
 	if Steamworks.lobby_id != lobby_id: return
 	_get_lobby_members()
 
-func _on_lobby_data_update(success: int, lobby_id: int, member_id: int) -> void:
+func _on_lobby_data_update(_success: int, lobby_id: int, _member_id: int) -> void:
 	if Steamworks.lobby_id != lobby_id: return
 	_get_lobby_members()
 
