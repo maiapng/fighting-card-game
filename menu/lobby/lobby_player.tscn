@@ -38,3 +38,8 @@ layout_mode = 2
 text = "Usernamedasdas"
 label_settings = SubResource("LabelSettings_bqisf")
 script = ExtResource("2_bqisf")
+
+[node name="Button" type="Button" parent="Margin/Hbox" unique_id=1800067112]
+layout_mode = 2
+size_flags_vertical = 4
+text = "START GAME"

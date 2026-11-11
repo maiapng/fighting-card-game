@@ -31,6 +31,14 @@ func _get_lobby_members() -> void:
 		player_object.steam_id = Steam.getLobbyMemberByIndex(Steamworks.lobby_id, i)
 		_player_list.call_deferred("add_child", player_object)
 
+func _on_lobby_chat_update(lobby_id: int, _changed_id: int, _making_change_id: int, _chat_state: int) -> void:
+	if Steamworks.lobby_id != lobby_id: return
+	_get_lobby_members()
+
+func _on_lobby_data_update(success: int, lobby_id: int, member_id: int) -> void:
+	if Steamworks.lobby_id != lobby_id: return
+	_get_lobby_members()
+
 func _get_decks() -> void:
 	for deck in UserData.decks:
 		_deck_selector.add_item(deck.name)
