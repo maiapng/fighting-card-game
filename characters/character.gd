@@ -13,7 +13,6 @@ signal health_updated(health:int)
 
 func set_deck(deck_code:String) -> void:
 	deck = Deck.new(deck_code)
-	character = deck.character
 	current_health = character.health
 
 func _ready() -> void:

@@ -1,0 +1,71 @@
+[gd_scene format=4 uid="uid://c8cuiba5i5mn6"]
+
+[ext_resource type="Script" uid="uid://dug0eq2ltofjf" path="res://game/game.gd" id="1_l1rk1"]
+[ext_resource type="Texture2D" uid="uid://dduv0rbgced78" path="res://icon.svg" id="2_vasa2"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_h7iqs"]
+texture = ExtResource("2_vasa2")
+texture_region_size = Vector2i(32, 32)
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+3:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+3:1/0 = 0
+0:2/0 = 0
+1:2/0 = 0
+2:2/0 = 0
+3:2/0 = 0
+0:3/0 = 0
+1:3/0 = 0
+2:3/0 = 0
+3:3/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_8cj0n"]
+tile_size = Vector2i(64, 96)
+sources/0 = SubResource("TileSetAtlasSource_h7iqs")
+
+[node name="Game" type="Node2D" unique_id=1752133137]
+script = ExtResource("1_l1rk1")
+
+[node name="Background" type="Sprite2D" parent="." unique_id=95472981]
+
+[node name="Stage" type="TileMapLayer" parent="." unique_id=303719452]
+position = Vector2(32, 0)
+tile_map_data = PackedByteArray("AAAPAAQAAAAAAAAAAAAOAAQAAAAAAAEAAAAPAAIAAAAAAAAAAAAOAAIAAAAAAAEAAAANAAIAAAAAAAEAAAAMAAIAAAAAAAEAAAALAAIAAAAAAAAAAAAKAAIAAAAAAAAAAAAJAAIAAAAAAAEAAAAIAAIAAAAAAAEAAAAHAAIAAAAAAAEAAAAGAAIAAAAAAAAAAAAEAAIAAAAAAAEAAAADAAIAAAAAAAEAAAACAAIAAAAAAAEAAAACAAQAAAAAAAEAAAADAAQAAAAAAAEAAAAEAAQAAAAAAAEAAAAFAAQAAAAAAAAAAAAGAAQAAAAAAAAAAAAHAAQAAAAAAAEAAAAIAAQAAAAAAAEAAAAJAAQAAAAAAAEAAAAKAAQAAAAAAAAAAAALAAQAAAAAAAAAAAAMAAQAAAAAAAEAAAANAAQAAAAAAAEAAAAPAAMAAAAAAAAAAAAOAAMAAAAAAAEAAAANAAMAAAAAAAEAAAAMAAMAAAAAAAEAAAALAAMAAAAAAAAAAAAKAAMAAAAAAAAAAAAJAAMAAAAAAAEAAAAIAAMAAAAAAAEAAAAHAAMAAAAAAAEAAAAGAAMAAAAAAAAAAAAFAAMAAAAAAAAAAAAEAAMAAAAAAAEAAAADAAMAAAAAAAEAAAACAAMAAAAAAAEAAAABAAQAAAAAAAAAAAABAAMAAAAAAAAAAAABAAIAAAAAAAAAAAAFAAIAAAAAAAAAAAA=")
+tile_set = SubResource("TileSet_8cj0n")
+
+[node name="HUD" type="CanvasLayer" parent="." unique_id=1940979019]
+
+[node name="Hand" type="HBoxContainer" parent="HUD" unique_id=759060235]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -20.0
+offset_top = -40.0
+offset_right = 20.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="TopBar" type="HBoxContainer" parent="HUD" unique_id=601521027]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -429.66498
+offset_top = 20.0
+offset_right = 431.33447
+offset_bottom = 47.000015
+grow_horizontal = 2
+theme_override_constants/separation = 48
+
+[node name="LeftHealthBar" type="ProgressBar" parent="HUD/TopBar" unique_id=495032807]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="RightHealthBar" type="ProgressBar" parent="HUD/TopBar" unique_id=266376600]
+layout_mode = 2
+size_flags_horizontal = 3
