@@ -4,6 +4,8 @@ class_name Card extends Control
 @export_tool_button("Set Card")
 var set_card_action:Callable = _refresh_info
 
+
+
 @export var card:CardInfo:
 	set(new_card):
 		card = new_card
