@@ -14,7 +14,7 @@ func _ready() -> void:
 		get_tree().change_scene_to_packed(LOBBY_MANAGER)
 		return
 	_get_lobby_name()
-	_get_lobby_members.rpc()
+	_get_lobby_members()
 	_get_decks()
 
 func _get_lobby_name() -> void:
