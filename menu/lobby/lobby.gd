@@ -41,7 +41,7 @@ func _on_lobby_data_update(_success: int, lobby_id: int, _member_id: int) -> voi
 	_get_lobby_members()
 
 func _get_decks() -> void:
-	for deck in UserData.decks:
+	for deck:Deck in UserData.decks:
 		_deck_selector.add_item(deck.name)
 
 func _on_challenge_sent(challengee_id:int) -> void:
