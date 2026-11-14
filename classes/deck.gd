@@ -1,6 +1,6 @@
 class_name Deck extends Resource
 
-@export var name:String
+@export var title:String
 @export var character:CardDatabase.Characters
 @export var cards:Array[CardInfo]
 
