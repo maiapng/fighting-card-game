@@ -43,7 +43,7 @@ func _on_lobby_data_update(_success: int, lobby_id: int, _member_id: int) -> voi
 
 func _get_decks() -> void:
 	for deck:Deck in UserData.decks:
-		_deck_selector.add_item(deck.name)
+		_deck_selector.add_item(deck.title)
 
 func _on_challenge_sent(challengee_id:int) -> void:
 	var id:int = multiplayer.get_multiplayer_peer().get_peer_id_for_steam_id(challengee_id)

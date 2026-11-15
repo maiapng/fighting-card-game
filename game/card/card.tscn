@@ -8,7 +8,7 @@
 [sub_resource type="Theme" id="Theme_qtdp2"]
 RichTextLabel/colors/default_color = Color(0, 0, 0, 1)
 
-[node name="Card" type="Control" unique_id=432828512 node_paths=PackedStringArray("art", "title", "description")]
+[node name="Card" type="Control" unique_id=432828512 node_paths=PackedStringArray("art", "title", "description", "block")]
 custom_maximum_size = Vector2(200, 300)
 layout_mode = 3
 anchors_preset = 15
@@ -24,6 +24,7 @@ card = ExtResource("2_fdhqu")
 art = NodePath("Art")
 title = NodePath("Title")
 description = NodePath("Description")
+block = NodePath("Block")
 
 [node name="Art" type="TextureRect" parent="." unique_id=318745536]
 layout_mode = 0
@@ -62,3 +63,13 @@ offset_right = 348.0
 offset_bottom = 482.0
 bbcode_enabled = true
 text = "This is just a test card.[br]Testing."
+
+[node name="Block" type="RichTextLabel" parent="." unique_id=341686062]
+layout_mode = 0
+offset_left = 328.0
+offset_top = 20.0
+offset_right = 368.0
+offset_bottom = 60.0
+theme_override_font_sizes/normal_font_size = 32
+text = "L"
+scroll_active = false

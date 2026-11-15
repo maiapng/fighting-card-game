@@ -6,7 +6,8 @@
 [resource]
 script = ExtResource("1_qfcke")
 id = "test"
-name = "Test Card"
+title = "Test Card"
 description = "This is just a test card.[br]Testing."
+block_type = 1
 art = ExtResource("1_24a7i")
 metadata/_custom_type_script = "uid://co7iv5rsok2ii"
