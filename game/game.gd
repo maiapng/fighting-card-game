@@ -1,14 +1,16 @@
 class_name Game extends Node2D
 
 const CHARACTER_SCENE:PackedScene = preload("uid://gbhajhckw7as")
-
-var opponent_id:int
-
 @onready var background:Sprite2D = $Background
 @onready var stage:TileMapLayer = $Stage
+
+var opponent_id:int
 var host_character:Character
 var client_character:Character
 var rng:RandomNumberGenerator = RandomNumberGenerator.new()
+
+signal draw_phase
+signal main_phase
 
 func starting_game() -> Game:
 	return self

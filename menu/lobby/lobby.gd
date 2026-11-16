@@ -52,7 +52,6 @@ func _on_challenge_sent(challengee_id:int) -> void:
 	
 @rpc("any_peer")
 func _on_challenge_received(challenger_id:int) -> void:
-	print("oi")
 	_start_game(challenger_id)
 
 func _start_game(opponent_id:int) -> void:
