@@ -4,6 +4,7 @@ const LOBBY:PackedScene = preload("uid://nwkf1vr3lkvw")
 @onready var _lobby_id_input:LineEdit = $ID
 
 func _ready() -> void:
+	multiplayer.connected_to_server.connect(_on_connected_to_server)
 	Steam.lobby_created.connect(_on_lobby_created)
 	Steam.lobby_joined.connect(_on_lobby_joined)
 	if Steamworks.invite_lobby_id > 0:
@@ -42,3 +43,16 @@ func _on_host_pressed() -> void:
 
 func _on_join_pressed() -> void:
 	Steam.joinLobby(int(_lobby_id_input.text))
+
+func _on_local_host_pressed() -> void:
+	var peer:MultiplayerPeer = ENetMultiplayerPeer.new()
+	peer.create_server(852, 2)
+	multiplayer.set_multiplayer_peer(peer)
+
+func _on_local_join_pressed() -> void:
+	var peer:MultiplayerPeer = ENetMultiplayerPeer.new()
+	peer.create_client("localhost", 852)
+	multiplayer.set_multiplayer_peer(peer)
+
+func _on_connected_to_server() -> void:
+	pass
