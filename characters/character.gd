@@ -15,9 +15,9 @@ var hand:Array[CardInfo]
 
 func set_deck(character_deck:Deck) -> void:
 	# character = deck.character
+	# current_health = character.health
 	deck = character_deck.cards
 	deck.shuffle() 
-	current_health = character.health
 
 func draw(amount:int) -> void:
 	for i in amount:
@@ -26,4 +26,5 @@ func draw(amount:int) -> void:
 		card_drawn.emit(card_drawn)
 	
 func _ready() -> void:
-	sprite.sprite_frames = character.animations
+	# sprite.sprite_frames = character.animations
+	pass

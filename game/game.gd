@@ -8,5 +8,8 @@ var opponent_id:int
 var host_character:Character
 var client_character:Character
 
-func starting_game() -> Game:
+func starting_game(deck:Deck) -> Game:
+	host_character = Character.new()
+	host_character.set_deck(deck)
+	call_deferred("add_child", host_character)
 	return self

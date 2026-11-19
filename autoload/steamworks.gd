@@ -12,7 +12,7 @@ func initialize_steam() -> void:
 	var initialize_response: Dictionary = Steam.steamInitEx()
 	print("Did Steam initialize?: %s " % initialize_response)
 
-func start_game(opponent_id:int) -> void:
+func start_game(deck:Deck=UserData.decks[0]) -> void:
 	var game:Game = GAME.instantiate()
-	game.opponent_id = opponent_id
+	game.starting_game(deck)
 	get_tree().change_scene_to_node(game) 

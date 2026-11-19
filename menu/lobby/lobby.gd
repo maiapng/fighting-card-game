@@ -47,8 +47,8 @@ func _get_decks() -> void:
 func _on_challenge_sent(challengee_id:int) -> void:
 	var id:int = multiplayer.get_multiplayer_peer().get_peer_id_for_steam_id(challengee_id)
 	_on_challenge_received.rpc_id(id, multiplayer.get_unique_id())
-	Steamworks.start_game(id)
+	Steamworks.start_game()
 	
 @rpc("any_peer")
 func _on_challenge_received(challenger_id:int) -> void:
-	Steamworks.start_game(challenger_id)
+	Steamworks.start_game()
