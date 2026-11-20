@@ -1,9 +1,19 @@
 [gd_resource type="Resource" script_class="CharacterInfo" format=3 uid="uid://db18x5heoqrh"]
 
+[ext_resource type="Texture2D" uid="uid://cujpqrp5p1f4p" path="res://characters/character1/Transformice_mouse.png" id="1_1h74v"]
 [ext_resource type="Script" uid="uid://co7iv5rsok2ii" path="res://classes/card_info.gd" id="1_hto4b"]
 [ext_resource type="Script" uid="uid://0jsn8vnnksji" path="res://characters/character_info.gd" id="2_1h74v"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_54qew"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_1h74v")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}]
 
 [resource]
 script = ExtResource("2_1h74v")
