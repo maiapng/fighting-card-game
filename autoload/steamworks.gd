@@ -14,5 +14,5 @@ func initialize_steam() -> void:
 
 func start_game(deck:Deck=UserData.decks[0]) -> void:
 	var game:Game = GAME.instantiate()
-	game.starting_game(deck)
+	game.player_deck = deck
 	get_tree().change_scene_to_node(game) 

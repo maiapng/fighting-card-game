@@ -5,8 +5,8 @@ enum Characters {
 	Character2,
 }
 
-static func get_character(char:Characters) -> CharacterInfo:
-	match(char):
+static func get_character(character:Characters) -> CharacterInfo:
+	match(character):
 		Characters.Character1:
 			return preload("uid://db18x5heoqrh")
 	return

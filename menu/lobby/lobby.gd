@@ -50,5 +50,5 @@ func _on_challenge_sent(challengee_id:int) -> void:
 	Steamworks.start_game()
 	
 @rpc("any_peer")
-func _on_challenge_received(challenger_id:int) -> void:
+func _on_challenge_received(_challenger_id:int) -> void:
 	Steamworks.start_game()

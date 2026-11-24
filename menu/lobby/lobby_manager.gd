@@ -54,5 +54,5 @@ func _on_local_join_pressed() -> void:
 	peer.create_client("localhost", 852)
 	multiplayer.set_multiplayer_peer(peer)
 
-func _on_peer_connected(id:int) -> void:
+func _on_peer_connected(_id:int) -> void:
 	Steamworks.start_game()
