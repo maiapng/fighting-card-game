@@ -8,12 +8,10 @@ var characters:Array[Character]
 var player_deck:Deck
 
 func _ready() -> void:
-	print(player_deck)
 	_add_character.rpc(multiplayer.get_unique_id(), player_deck)
 
 @rpc("any_peer", "call_local")
 func _add_character(id:int, deck:Deck) -> void:
-	print("oi")
 	var new_character:Character = Character.new()
 	new_character.set_deck(deck)
 	call_deferred("add_child", new_character)
